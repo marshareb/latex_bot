@@ -13,7 +13,7 @@ pip install -r requirements
 Next, you'll need to add a .groupy.key file to your home directory, and in it copy and paste your access token. In order to do that,
 you'll go to https://dev.groupme.com and click on the access token tab in the top right.
 
-Finally, you'll need to make an Imgur account and go to https://api.imgur.com/oauth2/addclient and register your client. Find the client_id, and save that in the variable IMGUR_ACCESS.
+Finally, you'll need to make an Imgur account, go to https://api.imgur.com/oauth2/addclient, and register your client. Find the client_id, and save that in the variable IMGUR_ACCESS.
 
 # Configuring Latex Bot
 
