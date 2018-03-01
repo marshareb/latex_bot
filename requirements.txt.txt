@@ -1,2 +1,0 @@
-pyimgur==0.6.0
-groupyapi==0.8.1
