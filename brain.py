@@ -16,7 +16,7 @@ def process_message(message):
         f = open('test.png', 'wb')
         f.write(r.content)
         f.close()
-        return 'text.png'
+        return 'test.png'
     return None
 
 if __name__ == '__main__':    
