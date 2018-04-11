@@ -1,48 +1,30 @@
-import groupy
+import botme
 import time
 import requests
 import pyimgur
 
-IMGUR_ACCESS = ''
-
-
 def process_message(message):
     message = message.lower().split()
+    try:
+        print(message[0])
+    except:
+        return None
     if message[0] == '!latex':
         message = ''.join(message[1:])
-        url ='http://latex.codecogs.com/gif.latex? ' + message
+        url ='http://latex.codecogs.com/png.latex? ' + message
         r = requests.get(url)
-        f = open('test.gif', 'wb')
+        f = open('test.png', 'wb')
         f.write(r.content)
         f.close()
-        im = pyimgur.Imgur(IMGUR_ACCESS)
-        uploaded_image = im.upload_image('test.gif', title="latex bot")
-        return uploaded_image.link
+        return 'text.png'
     return None
 
-group_name = 'Test'
-bot_name = 'latexbot'
-
-if __name__ == '__main__':
-    index = 0
-    groups = groupy.Group.list()
-    for i in range(len(groups)):
-        print(i)
-        if group_name in str(groups[i]).split()[0]:
-            index = i
-            break
-    group = groups[index]
-
-    index = 0
-    bots = groupy.Bot.list()
-    for i in range(len(bots)):
-        if bot_name in str(bots[i]).split():
-            index = i
-    bot = bots[index]
-
+if __name__ == '__main__':    
+    bot = botme.Manager('')
+    bot.start_bot('latexbot')
     # Loop to continuously run
     while True:
-        x = process_message(group.messages().newest.text)
+        x = process_message(bot.retrieve_message()[1])
         if x != None:
-            bot.post(x)
+            bot.post_picture('test.png')
         time.sleep(3)

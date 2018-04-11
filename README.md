@@ -9,21 +9,17 @@ In the Python console, run
 pip install -r requirements
 ```
 
-
-Next, you'll need to add a .groupy.key file to your home directory, and in it copy and paste your access token. In order to do that,
-you'll go to https://dev.groupme.com and click on the access token tab in the top right.
-
-Finally, you'll need to make an Imgur account, go to https://api.imgur.com/oauth2/addclient, and register your client. Find the client_id, and save that in the variable IMGUR_ACCESS.
+Next, go to https://dev.groupme.com/ and in the top right hit the Access Token button. In brain.py in the argument for botme.Manager(''), add your groupme key. Latex Bot is now ready to run.
 
 # Configuring Latex Bot
 
-In the brain.py file, modify the variables group_name and bot_name to what group you want and what you want the bot's name to be. Then, in a console on the computer you which to host Latex bot, run the command
+Simply run
 
 ```
 nohup python3 brain.py &
 ```
 
-This will allow him to monitor your groups for as long as the script is running.
+and answer all of the questions prompted in the command line. This will allow him to monitor your groups for as long as the script is running.
 
 # How to Use Latex Bot
 
@@ -36,7 +32,7 @@ The basic structure for calling Latex bot is
 So, for example,
 
 ```
-!latex sin(x)+1
+!latex \sin(x)+1
 ```
 
-will output sin(x)+1 into your chat.
+will output \sin(x)+1 into your chat.
