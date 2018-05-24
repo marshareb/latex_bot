@@ -9,11 +9,11 @@ In the Python console, run
 pip install -r requirements
 ```
 
-Next, go to https://dev.groupme.com/ and in the top right hit the Access Token button. In brain.py in the argument for botme.Manager(''), add your groupme key. Latex Bot is now ready to run.
 
 # Configuring Latex Bot
 
-Simply run
+First, go to https://dev.groupme.com/ and in the top right hit the Access Token button. In brain.py in the argument for botme.Manager(''), add your groupme key.
+Next, change the variables in the bot.create_bot() function from test and latexbot to whatever you want. Then, simply run
 
 ```
 nohup python3 brain.py &

@@ -1,4 +1,4 @@
-import botme
+import BotMe.main as Bot
 import time
 import requests
 import pyimgur
@@ -20,8 +20,8 @@ def process_message(message):
     return None
 
 if __name__ == '__main__':    
-    bot = botme.Manager('')
-    bot.start_bot('latexbot')
+    bot = Bot.Manager('')
+    bot.create_bot('latexbot', 'Test')
     # Loop to continuously run
     while True:
         x = process_message(bot.retrieve_message()[1])
