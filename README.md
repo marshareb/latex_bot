@@ -9,6 +9,8 @@ In the Python console, run
 pip install -r requirements
 ```
 
+Note that you will need LaTeX on your machine in order to run Latex bot. 
+
 
 # Configuring Latex Bot
 
@@ -36,3 +38,11 @@ So, for example,
 ```
 
 will output \sin(x)+1 into your chat.
+
+If the crop coordinates are too small, you can edit them within the chat. Edit these by running
+
+```
+!coord (x1, y1, x2, y2)
+```
+
+where x1, x2, y1, y2 are the desired coordinates to crop.
